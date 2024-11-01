@@ -7,4 +7,12 @@ public class NestedExchangeApiResponse {
     private float usd;
     @SerializedName("BRL")
     private float brl;
+
+    public float getUsd(){
+        return usd;
+    }
+
+    public float getBrl(){
+        return brl;
+    }
 }

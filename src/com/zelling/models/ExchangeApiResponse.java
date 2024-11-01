@@ -9,4 +9,16 @@ public class ExchangeApiResponse {
     private String baseCode;
     @SerializedName("conversion_rates")
     private NestedExchangeApiResponse nested;
+
+    public String getResult(){
+        return result;
+    }
+
+    public String getBaseCode(){
+        return baseCode;
+    }
+
+    public NestedExchangeApiResponse getNestedExchangeApiResponse(){
+        return nested;
+    }
 }
