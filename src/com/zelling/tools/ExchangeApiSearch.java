@@ -22,7 +22,6 @@ public class ExchangeApiSearch {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
             var newFinal = gson.fromJson(response.body(), ExchangeApiResponse.class);
             return newFinal;
         } catch (Exception e) {
