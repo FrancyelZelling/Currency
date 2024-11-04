@@ -4,39 +4,39 @@ import com.google.gson.annotations.SerializedName;
 
 public class NestedExchangeApiResponse {
     @SerializedName("USD")
-    private float usd;
+    private double usd;
     @SerializedName("BRL")
-    private float brl;
+    private double brl;
     @SerializedName("ARS")
-    private float ars;
+    private double ars;
     @SerializedName("BOB")
-    private float bob;
+    private double bob;
     @SerializedName("CLP")
-    private float clp;
+    private double clp;
     @SerializedName("COP")
-    private float cop;
+    private double cop;
 
-    public float getUsd(){
-        return usd;
+    public Currency getUsd(){
+        return new Currency("USD", this.usd);
     }
 
-    public float getBrl(){
-        return brl;
+    public Currency getBrl(){
+        return new Currency("BRL", this.brl);
     }
 
-    public float getArs() {
-        return ars;
+    public Currency getArs(){
+        return new Currency("Ars", this.ars);
     }
 
-    public float getBob() {
-        return bob;
+    public Currency getBob(){
+        return new Currency("BOB", this.bob);
     }
 
-    public float getClp() {
-        return clp;
+    public Currency getClp(){
+        return new Currency("CLP", this.clp);
     }
 
-    public float getCop() {
-        return cop;
+    public Currency getCop(){
+        return new Currency("BRL", this.cop);
     }
 }
