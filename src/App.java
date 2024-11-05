@@ -1,17 +1,37 @@
+import com.zelling.tools.Converter;
 import com.zelling.tools.ExchangeApiSearch;
+import com.zelling.tools.UiHelper;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        var ui = new UiHelper();
+        var scanner = new Scanner(System.in);
         var apiSearch = new ExchangeApiSearch();
-        var result = apiSearch.search("BRL");
-        System.out.println(result.getNestedExchangeApiResponse().getUsd());
-        System.out.println(result.getNestedExchangeApiResponse().getArs());
-        System.out.println(result.getNestedExchangeApiResponse().getBob());
-        System.out.println(result.getNestedExchangeApiResponse().getCop());
-        System.out.println(result.getNestedExchangeApiResponse().getClp());
+        var option = 0;
 
-        System.out.println("*********************************************************");
+        while(option != 3){
+            // aqui quero simplesmente deixar o mais limpo possivel
+            // passar as opções basicas
+            // passar a opção de cada conversão, pra isso preciso mandar a opção base pra uma função
+            // função na qual vai implementar toda a lógica pora conversão de valores (busca na api, conversão e retornar)
+            // a funcão vai me retornar o valor para que eu consiga exibir uma mensagem na tela
+            // vou ter cases para cada opção
+            ui.mainMenu();
+            option = scanner.nextInt();
+            switch (option) {
+                case 1:
+                    ui.conversionStepOne();
+                    var conversionOption = scanner.nextInt();
 
-        System.out.printf("10 reais em peso argentino é %.2f%n", (result.getNestedExchangeApiResponse().getArs()*10));
+                    switch (conversionOption){
+                        case 1:
+                            System.out.println("Digite o valor a converter: ");
+                            var amount = scanner.nextDouble();
+                    }
+            }
+        }
     }
 }

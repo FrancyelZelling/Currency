@@ -8,6 +8,8 @@ public class Currency {
         this.name = name;
         this.value = value;
     }
+    public Currency(){
+    }
 
     public String getName() {
         return name;
