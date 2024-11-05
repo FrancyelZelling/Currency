@@ -1,18 +1,23 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Currency Converter
 
-## Folder Structure
+Uma aplicação para converter valores entre moedas pré-estabelecidas.
 
-The workspace contains two folders by default, where:
+Projeto desenvolvido como aprendizagem na formação ONE Alura.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Aprendizados
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- utilizar melhor a serialização utilizando o gson
+- utilizar classes como maneira melhor para estruturar código
+- aprofundamento na sintaxe switch no java
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Rodando localmente
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Para rodar localmente o projeto, é necessário a utilização do gson em seu formato .jar
+
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
