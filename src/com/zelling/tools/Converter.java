@@ -10,11 +10,8 @@ public class Converter {
 
     public double convert(int option, double amount){
         var apiSearch = new ExchangeApiSearch();
-        var converter = new Converter();
         var apiResult = new ExchangeApiResponse();
         var conversionRate = new Currency();
-        double result;
-
 
         switch (option){
             case 1:

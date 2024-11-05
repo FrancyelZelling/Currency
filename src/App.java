@@ -12,25 +12,50 @@ public class App {
         var apiSearch = new ExchangeApiSearch();
         var option = 0;
 
-        while(option != 3){
-            // aqui quero simplesmente deixar o mais limpo possivel
-            // passar as opções basicas
-            // passar a opção de cada conversão, pra isso preciso mandar a opção base pra uma função
-            // função na qual vai implementar toda a lógica pora conversão de valores (busca na api, conversão e retornar)
-            // a funcão vai me retornar o valor para que eu consiga exibir uma mensagem na tela
-            // vou ter cases para cada opção
+        while (option != 2) {
             ui.mainMenu();
             option = scanner.nextInt();
-            switch (option) {
-                case 1:
-                    ui.conversionStepOne();
-                    var conversionOption = scanner.nextInt();
 
-                    switch (conversionOption){
-                        case 1:
-                            System.out.println("Digite o valor a converter: ");
-                            var amount = scanner.nextDouble();
-                    }
+            if (option == 1) {
+                ui.conversionStepOne();
+                var convertOption = scanner.nextInt();
+                var converter = new Converter();
+                double amount, result;
+                System.out.println("Digite o valor que deseja converter:");
+                switch (convertOption) {
+                    case 1:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                    case 2:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                    case 3:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                    case 4:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                    case 5:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                    case 6:
+                        amount = scanner.nextDouble();
+                        result = converter.convert(convertOption, amount);
+                        System.out.println(result);
+                        break;
+                }
+            } else  {
+                System.out.println("Opção inválida.");
             }
         }
     }
